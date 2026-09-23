@@ -1,7 +1,31 @@
-function reverseNumber(x) {
-    return Number(String(x).split('').reverse().join(''));
+function reverseNumber(num) {
+    let reversed = 0;
+    while (num > 0) {
+        let digit = num % 10;
+        reversed = reversed * 10 + digit;
+        num = Math.floor(num / 10);
+    }
+    return reversed;
 }
-console.log(reverseNumber(532443));
+
+console.log(reverseNumber(532443)); 
+
+
+
+
+function reverse() {
+let x=prompt();
+let r="";
+for(let i=x.length-1 ;i>=0; i--){
+    r+=x[i];}
+   return r;}
+
+console.log(reverse(x));
+
+
+
+
+
 
 
 let i=0;

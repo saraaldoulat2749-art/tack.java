@@ -43,7 +43,7 @@ showMenu();
 
 
 let foodName ;
-
+let selectedItem;
 let available= false;
 
 while(available === false)
@@ -54,6 +54,7 @@ while(available === false)
     if(menu[i].name === foodName )
     {
         available= true;
+        selectedItem = menu[i];
         break;
     }else
     {
@@ -74,4 +75,9 @@ console .log(foodName);
       }
    }
 }
+
+let quantity =Number(prompt("Enter quantity:"));
+let totalPrice = selectedItem.price * quantity;
+document.write("Quantity : " +quantity +"<br>");
+document.write("TotalPrice : " +totalPrice);
 
