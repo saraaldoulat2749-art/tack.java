@@ -1,45 +1,77 @@
 let menu = [
-    { name: "Burger", price: "5", category: "main meal", available: "true" },
-    { name: "Zinger", price: "10", category: "main meal", available: "true" },
-    { name: "Shawerma", price: "3", category: "main meal", available: "true" },
-    { name: "pizza", price: "15", category: "main meal", available: "true" },
-    { name: "salat", price: "5", category: "appetisers", available: "true" }
+  {
+    name: "zinger",
+    price: 3,
+    category: "food",
+    available: true,
+  },
+  {
+    name: "burger",
+    price: 2,
+    category: "food",
+    available: true,
+  },
+  {
+    name: "pitzza",
+    price: 5,
+    category: "food",
+    available: true,
+  },
+  {
+    name: "Shawerma",
+    price: 6,
+    category: "food",
+    available: true,
+  },
+  {
+    name: "salat",
+    price: 7,
+    category: "food",
+    available: true
+  }
 ];
 
-function showMenu() {
-    for (let i = 0; i < menu.length; i++) {
-        console.log(menu[i].name + " - " + menu[i].price + " - " + menu[i].category + " - " + menu[i].available);
-    }
+function showMenu()
+{
+   for(let i=0 ; i<menu.length;i++) 
+   {
+    console.log(menu[i].name + "  " + menu[i].price + menu[i].category);
+   }
 }
 
 showMenu();
 
-let sf = 0;
-while (sf<menu.length) {
-    let userInput = prompt("Enter Your Food :");
-    if (!userInput) {
-            alert("Please enter a valid name.");
-            continue;
-        }
-  
-    let foundItem = menu.find(item => item.name.toLowerCase() === userInput.toLowerCase());
 
-    if (!foundItem) {
-        console.log("Item not found on the menu. Please try again.");
-    } else {
-        sf = foundItem;
-       break;
+let foodName ;
+
+let available= false;
+
+while(available === false)
+{
+    foodName = prompt("please enter food name ");
+  for(let i=0 ; i<menu.length;i++) 
+  {
+    if(menu[i].name === foodName )
+    {
+        available= true;
+        break;
+    }else
+    {
+        continue;
     }
+  }
+
 }
-let quantity =Number(prompt("Enter Your quantity"));
-let totalprice = Number(sf.price) * quantity ;
 
-document.write("<h2>Final Order</h2>");
+console .log(foodName);
 
-document.write("Food: " + sf.name + "<br>");
 
-document.write("Price: " + sf.price + "<br>");
+ for(let i=0 ; i<menu.length; i++) {
+   if(menu[i].name === foodName) {
+      document.write("<h3>Selected Food Details:</h3>");
+      for(let x in menu[i]) {
+          document.write(x + " : " + menu[i][x] + "<br>");
+      }
+   }
+}
 
-document.write("Quantity: " + quantity + "<br>");
-
-document.write("Total Price: " + totalprice + "<br>");
