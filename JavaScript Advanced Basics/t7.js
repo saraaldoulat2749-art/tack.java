@@ -28,10 +28,13 @@ if (!PhoneNumberRegex.test(PhoneNumber))
     return;
 }
 alert("Welcome, " + UserName);
-localStorage.setItem("Order" , Order);
-document.write("Order : " , Order , "<br>");
-
 sessionStorage.setItem("UserName :" , UserName);
-document.write("User Name :" , UserName);
+document.write("User Name :" , UserName ,"<br>");
+
+
+localStorage.setItem("Order" , Order);
+document.write("Order : " , Order  );
+
+
 }
 
