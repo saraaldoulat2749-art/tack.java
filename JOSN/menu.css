@@ -1,0 +1,44 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 30px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+#menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+#menu div {
+    background-color: white;
+    width: 220px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+}
+
+#menu div:hover {
+    transform: translateY(-5px);
+    transition: 0.3s;
+}
+
+#menu p {
+    font-size: 16px;
+    margin: 10px 0;
+    color: #444;
+}
+
+#menu p:first-child {
+    font-size: 20px;
+    font-weight: bold;
+    color: #e67e22;
+}

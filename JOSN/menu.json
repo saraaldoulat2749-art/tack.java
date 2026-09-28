@@ -1,0 +1,29 @@
+{
+    "menu" :
+    [
+      {  "mealName" : "zinger",
+         "Price": 5 ,
+         "Availability" : true
+    
+      },
+      
+      {  "mealName" : "burger",
+         "Price": 4 ,
+         "Availability" : true
+    
+      },
+
+      {  "mealName" : "shawarma",
+         "Price": 3 ,
+         "Availability" : true
+    
+      },
+
+      {  "mealName" : "rice",
+         "Price": 5 ,
+         "Availability" : true
+    
+      }
+    
+    ]  
+}

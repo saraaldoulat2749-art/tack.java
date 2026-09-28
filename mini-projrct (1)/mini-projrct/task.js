@@ -10,14 +10,20 @@ for (let i = 0; i < arr.length; i++) {
 }
 
 addButton.onclick = function() {
+
     let task = inputText.value;
 
     arr.push(task);
-    localStorage.setItem("task", JSON.stringify(arr));
-
     
-    listTask.innerHTML += '<p>'+task+ '<button onclick="deleteTask(this)">Delete</button></p>';
-    inputText.value = "";
+    localStorage.setItem("task", JSON.stringify(arr));
+    
+    for (let i = 0; i < arr.length; i++) {
+        listTask.innerHTML += `
+            <p>
+                ${task} 
+                <button onclick="deleteTask(${arr[i]})">Delete</button>
+            </p>`;
+    }
 }
 
 
